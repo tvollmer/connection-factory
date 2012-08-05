@@ -1,11 +1,18 @@
+Connection Factory
+===
+A small project dedicated to providing a way to secure database credentials in envioronments that
+would otherwise be stored in plain text.  To name a few, this would include Tomcat & Jboss, and Jetty.
 
+Credits
+---
 Thanks to Murali, MICHEAL REMIJAN, the folks at The Apache Software Foundation, and the folks at The Legion of the Bouncy Castle for inspiring this small project.
-  http://scribblejava.wordpress.com/2010/03/23/encrypt-username-and-password-for-jndi-in-tomcat-server-xml/trackback/
-  http://java.sys-con.com/node/393364
-  http://tomcat.apache.org/tomcat-5.5-doc/jndi-resources-howto.html#Adding%20Custom%20Resource%20Factories
-  http://www.bouncycastle.org/java.html
+* http://scribblejava.wordpress.com/2010/03/23/encrypt-username-and-password-for-jndi-in-tomcat-server-xml/trackback/
+* http://java.sys-con.com/node/393364
+* http://tomcat.apache.org/tomcat-5.5-doc/jndi-resources-howto.html#Adding%20Custom%20Resource%20Factories
+* http://www.bouncycastle.org/java.html
 
-
+Goals
+---
 In an effort to provide a working example, this project is a cumulation of previous works, with the following additions:
 * added some dependency management (maven), unit tests, and a touch of personal polish
 * provide a working example with other Providers and Ciphers
