@@ -59,6 +59,40 @@ Update Tomcat's server.xml (or you may use your META-INF/context.xml):
 	 ... 
 	</Context>
 
+Add a convenience script to Tomcat's bin directory:
+---
+
+	tomcat$ cat bin/encrypt.sh 
+
+	#!/bin/bash
+	
+	set -e
+	
+	UNENCRYPTED_STRING="$1"
+	if [ "$UNENCRYPTED_STRING" == "" ]; then
+	    echo ""
+	    echo "WARN : NO ARGUMENTS FOUND."
+	    echo ""
+	    echo "syntax:"
+	    echo "========================================="
+	    echo "$(basename $0) 'string to encrypt'"
+	    echo ""
+	    echo "examples :"
+	    echo "$(basename $0) 'hello world'"
+	    echo ""
+	    exit 0;
+	fi;
+	
+	dir=$(dirname $0)
+	
+	java -classpath "$dir/../lib/*" com.voltsolutions.security.Encryptor "$UNENCRYPTED_STRING"
+
+Make sure that it's marked with execute permissions, and try it out
+
+	cd $TOMCAT_HOME
+        chmod +x bin/encrypt.sh
+        ./bin/encrypt.sh "hello world"
+
 Further Changes:
 ---
 * make it your own, fork it or branch it, and change things (salt, algos, ciphers, pass phrase, iterations)
