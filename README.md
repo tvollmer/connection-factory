@@ -61,8 +61,7 @@ Update Tomcat's server.xml (or you may use your META-INF/context.xml):
 
 Add a convenience script to Tomcat's bin directory:
 ---
-
-	tomcat$ cat bin/encrypt.sh 
+tomcat$ cat bin/encrypt.sh 
 
 	#!/bin/bash
 	
@@ -90,8 +89,8 @@ Add a convenience script to Tomcat's bin directory:
 Make sure that it's marked with execute permissions, and try it out
 
 	cd $TOMCAT_HOME
-        chmod +x bin/encrypt.sh
-        ./bin/encrypt.sh "hello world"
+	chmod +x bin/encrypt.sh
+	./bin/encrypt.sh "hello world"
 
 Further Changes:
 ---
