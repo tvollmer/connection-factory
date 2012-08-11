@@ -22,7 +22,7 @@ public class CryptoProvider {
     private static final int DEFAULT_KEYLENGTH = 1024;
     private static final String DEFAULT_CIPHER_KEYGENERATOR = "AES/CTR/NOPADDING";
     private static final String DEFAULT_ALGORITHM = "PBEWITHSHA256AND256BITAES-CBC-BC";
-    private static final String DEFAULT_PASSPHRASE = "The quick brown fox jumped over the lazy brown dog";
+    private static final String DEFAULT_PASSPHRASE = "The quick brown fox jumps over the lazy dog";
 
     private Cipher eCipher = null;
     private Cipher dCipher = null;
