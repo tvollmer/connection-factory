@@ -94,4 +94,19 @@ Make sure that it's marked with execute permissions, and try it out
 
 Further Changes:
 ---
-* make it your own, fork it or branch it, and change things (salt, algos, ciphers, pass phrase, iterations)
+Make it your own, fork it or branch it, and change things (salt, algos, ciphers, pass phrase, iterations).
+
+For example:
+* after you fork and/or clone, create a local branch with "git checkout -b LOCAL_MODS"
+* change the artifactId in pom.xml to include "-custom"
+* update src/main/java/com/voltsolutions/security/CryptoProvider.java, and change the salt, algos, ciphers, passphrase, iter's, ...
+* update the unit tests' expectations
+* git commit -m "made local changes."
+
+To get updates:
+* git checkout master
+* git fetch origin
+* git diff master..origin/master
+* git merge origin/master
+* git checkout LOCAL_MODS
+* git rebase master
