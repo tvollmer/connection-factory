@@ -14,7 +14,7 @@ public class TestSalt {
     private CryptoProvider crypto = new CryptoProvider();
     
     private String plaintext = "hello world";
-    private String encrypted = "V74Csn3chR63DQ4=";
+    private String encrypted = "YZ+Afmfd77qN1qU=";
     
 //    @BeforeClass
 //    public static void configureProvider(){
