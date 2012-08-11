@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.voltsolutions</groupId>
   <artifactId>connection-factory</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <build>
     <plugins>
       <plugin>
@@ -22,7 +22,7 @@
   <scm>
    <connection>scm:git:git@github.com:tvollmer/connection-factory.git</connection>
    <url>scm:git:git@github.com:tvollmer/connection-factory.git</url>
-    <tag>connection-factory-1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
   <dependencies>
     <dependency>
