@@ -96,7 +96,7 @@ Further Changes:
 ---
 Make it your own, fork it or branch it, and change things (salt, algos, ciphers, pass phrase, iterations).
 
-For example:
+For example (vendor branch approach):
 * after you fork and/or clone, create a local branch with "git checkout -b LOCAL_MODS"
 * change the artifactId in pom.xml to include "-custom"
 * update src/main/java/com/voltsolutions/security/CryptoProvider.java, and change the salt, algos, ciphers, passphrase, iter's, ...
@@ -110,3 +110,21 @@ To get updates:
 * git merge origin/master
 * git checkout LOCAL_MODS
 * git rebase master
+
+For a BETTER example (use 2 projects / 2 remotes; upstream and origin):
+* create a private repo called "connection-factory-custom" (aka. origin)
+* git clone git@github.com:tvollmer/connection-factory-custom.git
+* git remote add upstream git@github.com:tvollmer/connection-factory.git
+* git fetch upstream
+* git merge upstream/master
+* change the artifactId in pom.xml to include "-custom"
+* update src/main/java/com/voltsolutions/security/CryptoProvider.java, and change the salt, algos, ciphers, passphrase, iter's, ...
+* update the unit tests' expectations
+* git commit -m "made local changes."
+* git push -u origin master
+
+To get updates:
+* git fetch upstream
+* git merge upstream/master
+* git push -u origin master
+
