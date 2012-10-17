@@ -52,7 +52,7 @@ Update Tomcat's server.xml (or you may use your META-INF/context.xml):
 	        type="javax.sql.DataSource"
 			factory="com.voltsolutions.EncryptedDataSourceFactory"
 	        username="Ql6u3CAl988=" password="CgrtRRVz6A3aaGAfDpRRuQ=="
-	        driverClassName="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@server:1523:TEST"
+	        driverClassName="oracle.jdbc.OracleDriver" url="jdbc:oracle:thin:@server:1521:TEST"
 	        maxActive="15" minIdle="2"
 			logAbandoned="true" removeAbandoned="true" removeAbandonedTimeout="60"
 	    />
